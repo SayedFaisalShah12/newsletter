@@ -7,7 +7,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
-import 'package:newslatter/ui/screens/splash_screen/splash_screen_3.dart';
+import 'package:newslatter/ui/screens/Signup_or_login/signup_or_login.dart';
 
 import '../../../core/constants/const_colors.dart';
 
@@ -45,7 +45,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                             InkWell(
                               child: Image.asset('assets/image/logo.png'),
                               onTap: (){
-                                Get.to(const SplashScreen3());
+                                Get.to( LoginOrSignUp());
                               },
                             ),
                             Text("Tap to Continue!", style: GoogleFonts.kalam(

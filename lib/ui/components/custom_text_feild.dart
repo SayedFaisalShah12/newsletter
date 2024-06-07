@@ -1,30 +1,39 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../core/constants/const_colors.dart';
 
 class CustomTextFeild extends StatelessWidget {
   final String hint;
-  final TextEditingController controller;
+  final TextEditingController? EmailController;
 
   const CustomTextFeild({
     required this.hint,
-    required this.controller,
+    this.EmailController,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: controller,
-      style: GoogleFonts.plusJakartaSans(
-          color: Colors.white, fontWeight: FontWeight.w600, fontSize: 18),
-      textAlign: TextAlign.center,
-      decoration: InputDecoration(
-          border: InputBorder.none,
-          hintText: hint,
-          hintStyle: GoogleFonts.plusJakartaSans(
-              fontSize: 18, fontWeight: FontWeight.w600, color: Colors.white)),
-      cursorColor: Colors.white,
+    return Container(
+      width: 226,
+      height: 80,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: ConstColor.textFieldColor.value,
+        borderRadius: BorderRadius.circular(25),
+      ),
+      child: TextField(
+        controller: EmailController,
+        textAlign: TextAlign.center,
+        decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: hint,
+            hintStyle: GoogleFonts.kalam(
+              fontSize: 30,
+              color: Colors.black,
+          ),
+        )
+      ),
     );
   }
 }

@@ -14,10 +14,52 @@ class BottomSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      return CustomContainer(controller: controller);
+      return AnimatedContainer(
+        duration:   Duration(milliseconds: 700),
+        curve: Curves.easeInOut,
+        height: controller.isBottomSheetVisible.value ? Get.size.height * 0.83 : 0,
+        decoration:  BoxDecoration(
+          color: ConstColor.containerBackgroundColor.value,
+                    borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
+        ),
+        child: controller.isBottomSheetVisible.value
+            ? Column(
+              children: [
+                Align(
+                    alignment:Alignment.centerLeft,
+                    child: IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_back_ios))
+                ),
+                SingleChildScrollView(
+                  child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                        Container(
+                          padding: EdgeInsets.all(30),
+                          child: Text(splash1, style: GoogleFonts.kalam(
+                          fontSize: 43.sp,
+                          color: ConstColor.FamilyColor.value,
+                          fontWeight: FontWeight.bold,
+                          )),
+                        ),
+                        const SizedBox(height: 60),
+                        CustomMainButton(title: 'Sign Up',   style: GoogleFonts.kalam(), onpressed: () {  },),
+
+                        const SizedBox(height: 60),
+                        CustomMainButton(title: 'Login', style: GoogleFonts.kalam(), onpressed: () {  },),
+
+                        const SizedBox(height: 40),
+                        const RichTextTwo()
+                    ],
+                  ),
+                ),
+              ],
+            )
+            : const SizedBox(),
+      );
     });
   }
 }
-
-
 

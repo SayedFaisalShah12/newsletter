@@ -16,4 +16,7 @@ class ConstColor {
 
   ///Words color
   static  var FamilyColor =const Color(0xffF08080).obs;
+
+  ///textfiled color
+  static  var textFieldColor =const Color(0xffF08080).obs;
 }

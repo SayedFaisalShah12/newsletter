@@ -5,20 +5,21 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/controller/animated_bottomsheet_controller.dart';
-import 'package:newslatter/ui/components/animated_bottomsheet.dart';
+import 'package:newslatter/ui/screens/login/login.dart';
 import '../../../core/constants/const_colors.dart';
 import '../../../core/constants/const_rich_text.dart';
 import '../../../core/constants/const_texts.dart';
+import '../../components/custom_logo.dart';
 import '../../components/custom_main_button.dart';
 
-class SplashScreen3 extends StatefulWidget {
-  const SplashScreen3({super.key});
+class LoginOrSignUp extends StatefulWidget {
+  const LoginOrSignUp({super.key});
 
   @override
-  State<SplashScreen3> createState() => _SplashScreen3State();
+  State<LoginOrSignUp> createState() => _LoginOrSignUpState();
 }
 
-class _SplashScreen3State extends State<SplashScreen3> {
+class _LoginOrSignUpState extends State<LoginOrSignUp> {
   final bottomSheetController = Get.put(BottomSheetController());
   @override
   Widget build(BuildContext context) {
@@ -39,11 +40,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: Get.height * 0.15,
-                  width: Get.width * 0.28,
-                  child: Image.asset('assets/image/logo.png'),
-                ),
+                Logo(),
              Container(
               height:   Get.size.height * 0.82,
               decoration:  BoxDecoration(
@@ -71,10 +68,10 @@ class _SplashScreen3State extends State<SplashScreen3> {
                         )),
                       ),
                       const SizedBox(height: 50),
-                      CustomMainButton(title: 'Sign Up',   style: GoogleFonts.kalam()),
+                      CustomMainButton(title: 'Sign Up', onpressed: (){}, style: GoogleFonts.kalam(),),
 
                       const SizedBox(height: 60),
-                      CustomMainButton(title: 'Login', style: GoogleFonts.kalam()),
+                      CustomMainButton(title: 'Login', onpressed: ()=>Get.to(Login()) ,style: GoogleFonts.kalam()),
 
                       const SizedBox(height: 70),
                       const RichTextTwo()
@@ -91,3 +88,5 @@ class _SplashScreen3State extends State<SplashScreen3> {
     );
   }
 }
+
+
