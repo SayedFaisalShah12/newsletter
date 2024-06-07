@@ -7,6 +7,7 @@ import 'package:newslatter/core/constants/const_texts.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
 import '../../controller/animated_bottomsheet_controller.dart';
 import '../../core/constants/const_rich_text.dart';
+import 'custom_main_container.dart';
 
 class BottomSheetWidget extends StatelessWidget {
   final BottomSheetController controller = Get.put(BottomSheetController());
@@ -14,6 +15,7 @@ class BottomSheetWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
+
       return AnimatedContainer(
         duration:   Duration(milliseconds: 700),
         curve: Curves.easeInOut,
@@ -40,7 +42,7 @@ class BottomSheetWidget extends StatelessWidget {
                           padding: EdgeInsets.all(30),
                           child: Text(splash1, style: GoogleFonts.kalam(
                           fontSize: 43.sp,
-                          color: ConstColor.FamilyColor.value,
+                          color: ConstColor.textFieldColor.value,
                           fontWeight: FontWeight.bold,
                           )),
                         ),
@@ -59,6 +61,7 @@ class BottomSheetWidget extends StatelessWidget {
             )
             : const SizedBox(),
       );
+
     });
   }
 }
