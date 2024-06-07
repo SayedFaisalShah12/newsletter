@@ -42,7 +42,7 @@ class BottomSheetWidget extends StatelessWidget {
                           )),
                         ),
                         const SizedBox(height: 60),
-                        CustomMainButton(title: 'Sign Up',   style: GoogleFonts.kalam()),
+                        CustomMainButton(title: 'Sign Up this is comment',   style: GoogleFonts.kalam()),
                   
                         const SizedBox(height: 60),
                         CustomMainButton(title: 'Login', style: GoogleFonts.kalam()),
