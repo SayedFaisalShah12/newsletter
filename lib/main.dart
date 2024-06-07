@@ -4,7 +4,8 @@ import 'package:newslatter/ui/screens/splash_screen/splash_screen.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(ScreenUtilInit(
+  runApp(
+      ScreenUtilInit(
       designSize: const Size(390, 844),
       splitScreenMode: true,
       minTextAdapt: true,
@@ -23,11 +24,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
