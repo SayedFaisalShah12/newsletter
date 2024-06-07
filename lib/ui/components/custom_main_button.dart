@@ -16,7 +16,7 @@ class CustomMainButton extends StatelessWidget {
       height: 75.h,
       width: 180.w,
       decoration: BoxDecoration(
-        color: Color.fromRGBO(240, 128, 128, 0.9),
+        color:  Color.fromRGBO(240, 128, 128, 0.9),
         borderRadius: BorderRadius.circular(20),
       ),
       child: Center(

@@ -7,6 +7,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/controller/animated_bottomsheet_controller.dart';
 import 'package:newslatter/ui/components/animated_bottomsheet.dart';
 import '../../../core/constants/const_colors.dart';
+import '../../../core/constants/const_rich_text.dart';
+import '../../../core/constants/const_texts.dart';
+import '../../components/custom_main_button.dart';
 
 class SplashScreen3 extends StatefulWidget {
   const SplashScreen3({super.key});
@@ -40,13 +43,51 @@ class _SplashScreen3State extends State<SplashScreen3> {
                   height: Get.height * 0.15,
                   width: Get.width * 0.28,
                   child: Image.asset('assets/image/logo.png'),
-
                 ),
+             Container(
+              height:   Get.size.height * 0.82,
+              decoration:  BoxDecoration(
+                color: ConstColor.containerBackgroundColor.value,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25),
+                  topRight: Radius.circular(25),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Align(
+                      alignment:Alignment.centerLeft,
+                      child: IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_back_ios))
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(30),
+                        child: Text(splash1, style: GoogleFonts.kalam(
+                          fontSize: 43.sp,
+                          color: ConstColor.FamilyColor.value,
+                          fontWeight: FontWeight.bold,
+                        )),
+                      ),
+                      const SizedBox(height: 50),
+                      CustomMainButton(title: 'Sign Up',   style: GoogleFonts.kalam()),
+
+                      const SizedBox(height: 60),
+                      CustomMainButton(title: 'Login', style: GoogleFonts.kalam()),
+
+                      const SizedBox(height: 70),
+                      const RichTextTwo()
+                    ],
+                  ),
+                ],
+              )
+            ),
               ],
             ),
           ),
       ),
-      bottomSheet: BottomSheetWidget(),
+
     );
   }
 }

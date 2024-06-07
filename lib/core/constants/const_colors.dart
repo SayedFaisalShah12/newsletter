@@ -12,5 +12,8 @@ class ConstColor {
   static var thirdColor = Color(0xffF0808D).obs;
 
   ///Container Background Color
-  static var ContainerBackgroundColor = Color.fromRGBO(250, 250, 210, 0.9);
+  static  var containerBackgroundColor =const Color(0xffFAFAD2).obs;
+
+  ///Words color
+  static  var FamilyColor =const Color(0xffF08080).obs;
 }
