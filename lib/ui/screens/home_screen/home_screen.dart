@@ -100,9 +100,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
 
                           SizedBox(height: 20.h),
-                        CustomMainButton(title: 'Create Family', style: GoogleFonts.kalam()),
-                         SizedBox(height: 20.h),
-                        CustomMainButton(title: 'Join Family', style: GoogleFonts.kalam()),
+                        CustomMainButton(title: 'Create Family', style: GoogleFonts.kalam(), onpressed: () {  },),
+
+                        CustomMainButton(title: 'Join Family', style: GoogleFonts.kalam(), onpressed: () {  },),
 
                       ],
                     )
