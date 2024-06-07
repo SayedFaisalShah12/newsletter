@@ -40,6 +40,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
                   height: Get.height * 0.15,
                   width: Get.width * 0.28,
                   child: Image.asset('assets/image/logo.png'),
+
                 ),
               ],
             ),
