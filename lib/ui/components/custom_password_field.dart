@@ -36,7 +36,7 @@ class _CustomPasswordFeildState extends State<CustomPasswordFeild> {
             hintText: widget.hint,
             hintStyle: GoogleFonts.kalam(
               fontSize: 30,
-              color: Colors.black,
+              color: Colors.white ,
             ),
             suffixIcon: IconButton(
               icon: Icon(obsecureText ? Icons.visibility : Icons.visibility_off,),

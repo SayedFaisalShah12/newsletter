@@ -6,6 +6,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/controller/animated_bottomsheet_controller.dart';
 import 'package:newslatter/ui/screens/login/login.dart';
+import 'package:newslatter/ui/screens/signUp/signUp.dart';
 import '../../../core/constants/const_colors.dart';
 import '../../../core/constants/const_rich_text.dart';
 import '../../../core/constants/const_texts.dart';
@@ -63,15 +64,15 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                         padding: EdgeInsets.all(30),
                         child: Text(splash1, style: GoogleFonts.kalam(
                           fontSize: 43.sp,
-                          color: ConstColor.FamilyColor.value,
+                          color: ConstColor.bgColor.value,
                           fontWeight: FontWeight.bold,
                         )),
                       ),
                       const SizedBox(height: 50),
-                      CustomMainButton(title: 'Sign Up', onpressed: (){}, style: GoogleFonts.kalam(),),
+                      CustomMainButton(title: 'Sign Up', onpressed: ()=> Get.to(SignUpScreen()) , style: GoogleFonts.kalam(),),
 
                       const SizedBox(height: 60),
-                      CustomMainButton(title: 'Login', onpressed: ()=>Get.to(Login()) ,style: GoogleFonts.kalam()),
+                      CustomMainButton(title: 'Login', onpressed: ()=>Get.to(LoginScreen()) ,style: GoogleFonts.kalam()),
 
                       const SizedBox(height: 70),
                       const RichTextTwo()

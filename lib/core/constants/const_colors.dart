@@ -15,7 +15,8 @@ class ConstColor {
   static  var containerBackgroundColor =const Color(0xffFAFAD2).obs;
 
   ///Words color
-
+  static var wordsColor =const Color(0xffFFB370).obs;
+  static var wordsColor2 =const Color(0xffF08080).obs;
 
   ///textfiled color
   static  var textFieldColor =const Color(0xffF08080).obs;

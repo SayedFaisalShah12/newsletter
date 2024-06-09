@@ -1,23 +1,31 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
+import 'package:newslatter/ui/components/custom_icon_button.dart';
 import 'package:newslatter/ui/components/custom_logo.dart';
+import 'package:newslatter/ui/components/custom_main_button.dart';
 import 'package:newslatter/ui/components/custom_main_container.dart';
 import 'package:newslatter/ui/components/custom_password_field.dart';
+import 'package:newslatter/ui/components/custom_progress%20Indicator.dart';
 import 'package:newslatter/ui/components/custom_text_feild.dart';
 
+import '../../../controller/circular_progress_controller.dart';
 import '../../../core/constants/const_colors.dart';
 
-class Login extends StatefulWidget {
+class LoginScreen extends StatefulWidget {
 
-  const Login({super.key,});
+  const LoginScreen({super.key,});
+
   @override
-  State<Login> createState() => _LoginState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginState extends State<Login> {
+class _LoginScreenState extends State<LoginScreen> {
+  final ProgressController progressController = Get.put(ProgressController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,20 +49,53 @@ class _LoginState extends State<Login> {
                   widget: Column(
                     children: [
                       SizedBox(height: 20,),
-                      Text("Login", style: GoogleFonts.kalam(
-                        fontSize: 35.sp,
-                      )),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          children: [
+                            InkWell(child: Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
+                            SizedBox(width: 131.h,),
+                            Text("Login", style: GoogleFonts.kalam(fontSize: 35.sp,)),
+                          ],
+                        ),
+                      ),
 
                       SizedBox(height: 40.h,),
                       CustomTextFeild(hint: "Username",),
 
-                      SizedBox(height: 53.h,),
+                      SizedBox(height: 20.h,),
                       CustomPasswordFeild(hint: "Password"),
 
-                      SizedBox(height: 10,),
-                      InkWell(
-                        child: Text("Forgot Password", style: GoogleFonts.kalam(fontSize: 12, )),
-                      )
+                      SizedBox(height: 12.h,),
+                      InkWell(child: Text("Forgot Password", style: normalText)),
+
+                      SizedBox(height: 12.h,),
+                      Obx(() {
+                         return progressController.isLoading.value
+                            ? CircularProgressIndicator( color: ConstColor.wordsColor2.value,)
+                            : Container();
+                      }),
+
+                      SizedBox(height: 70.h,),
+                      Text("or Continue with", style: mediumText,),
+
+                      SizedBox(height: 22.h,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          CustomIconButton(image: Image.asset("assets/icon/google.png")),
+                          SizedBox(width: 20.h,),
+                          CustomIconButton(image: Image.asset("assets/icon/apple.png")),
+                        ],
+                      ),
+
+                      SizedBox(height: 40.h,),
+                      CustomMainButton(title: 'Login', onpressed:(){
+                       progressController.startLoading();
+                      }
+                      ),
+
+                      SizedBox(height: 7.h,),
                     ],
                   ),
               )

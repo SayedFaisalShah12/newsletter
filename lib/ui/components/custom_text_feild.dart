@@ -30,7 +30,7 @@ class CustomTextFeild extends StatelessWidget {
             hintText: hint,
             hintStyle: GoogleFonts.kalam(
               fontSize: 30,
-              color: Colors.black,
+              color: Colors.white,
           ),
         )
       ),
