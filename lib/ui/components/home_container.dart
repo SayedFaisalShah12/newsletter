@@ -18,7 +18,7 @@ class HomeContainer extends StatelessWidget {
           color:ConstColor.bgColor.value,
           border: Border.all(color:ConstColor.borderColor.value,width: 2.w)
       ),
-      child: Text(title,style: titleText,),
+      child: Text(title ),
     );
   }
 }

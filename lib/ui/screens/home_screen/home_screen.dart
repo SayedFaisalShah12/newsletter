@@ -1,15 +1,8 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'package:newslatter/core/constants/const_styles.dart';
 import '../../../core/constants/const_colors.dart';
-import '../../../core/constants/const_rich_text.dart';
-import '../../../core/constants/const_styles.dart';
-import '../../../core/constants/const_texts.dart';
 import '../../components/custom_main_button.dart';
 import '../../components/home_container.dart';
 
@@ -37,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
+              SizedBox(
 
                 height: 100.h,
                 width: double.infinity,
@@ -72,10 +65,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Padding(
-                          padding:   EdgeInsets.only(top: 32.h),
-                          child: Text("Your Families", style: titleText),
-                        ),
+                        // Padding(
+                        //   padding:   EdgeInsets.only(top: 32.h),
+                        //   child: Text("Your Families", style: titleText),
+                        // ),
 
                         Padding(
                           padding:  EdgeInsets.symmetric(horizontal: 10.w),

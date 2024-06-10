@@ -44,7 +44,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               CustomContainer(
                 widget: Column(
                   children: [
-                    SizedBox(height: 3,),
+
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Row(

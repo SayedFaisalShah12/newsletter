@@ -12,6 +12,7 @@ import 'package:newslatter/ui/components/custom_main_container.dart';
 import 'package:newslatter/ui/components/custom_password_field.dart';
 import 'package:newslatter/ui/components/custom_progress%20Indicator.dart';
 import 'package:newslatter/ui/components/custom_text_feild.dart';
+import 'package:newslatter/ui/screens/home_screen/home_screen.dart';
 
 import '../../../controller/circular_progress_controller.dart';
 import '../../../core/constants/const_colors.dart';
@@ -48,9 +49,9 @@ class _LoginScreenState extends State<LoginScreen> {
               CustomContainer(
                   widget: Column(
                     children: [
-                      SizedBox(height: 20,),
+                      SizedBox(height: 20.h,),
                       Padding(
-                        padding: const EdgeInsets.all(10.0),
+                        padding:   EdgeInsets.all(10.h),
                         child: Row(
                           children: [
                             InkWell(child: Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
@@ -61,10 +62,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
 
                       SizedBox(height: 40.h,),
-                      CustomTextFeild(hint: "Username",),
+                      const CustomTextFeild(hint: "Username",),
 
                       SizedBox(height: 20.h,),
-                      CustomPasswordFeild(hint: "Password"),
+                      const CustomPasswordFeild(hint: "Password"),
 
                       SizedBox(height: 12.h,),
                       InkWell(child: Text("Forgot Password", style: normalText)),
@@ -74,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                          return progressController.isLoading.value
                             ? CircularProgressIndicator( color: ConstColor.wordsColor2.value,)
                             : Container();
+
                       }),
 
                       SizedBox(height: 70.h,),
@@ -92,6 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(height: 40.h,),
                       CustomMainButton(title: 'Login', onpressed:(){
                        progressController.startLoading();
+                       Get.to(const HomeScreen());
                       }
                       ),
 

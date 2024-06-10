@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../core/constants/const_colors.dart';
 
@@ -15,8 +16,8 @@ class CustomTextFeild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 226,
-      height: 80,
+      width: 226.w,
+      height: 78.h,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: ConstColor.textFieldColor.value,

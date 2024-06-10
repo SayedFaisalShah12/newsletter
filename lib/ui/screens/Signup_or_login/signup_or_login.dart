@@ -41,46 +41,47 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Logo(),
-             Container(
-              height:   Get.size.height * 0.82,
-              decoration:  BoxDecoration(
-                color: ConstColor.containerBackgroundColor.value,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(25),
-                  topRight: Radius.circular(25),
+                const Logo(),
+             Expanded(
+               child: Container(
+                decoration:  BoxDecoration(
+                  color: ConstColor.containerBackgroundColor.value,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25),
+                    topRight: Radius.circular(25),
+                  ),
                 ),
-              ),
-              child: Column(
-                children: [
-                  Align(
-                      alignment:Alignment.centerLeft,
-                      child: IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_back_ios))
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(30),
-                        child: Text(splash1, style: GoogleFonts.kalam(
-                          fontSize: 43.sp,
-                          color: ConstColor.bgColor.value,
-                          fontWeight: FontWeight.bold,
-                        )),
-                      ),
-                      const SizedBox(height: 50),
-                      CustomMainButton(title: 'Sign Up', onpressed: ()=> Get.to(SignUpScreen()) , style: GoogleFonts.kalam(),),
-
-                      const SizedBox(height: 60),
-                      CustomMainButton(title: 'Login', onpressed: ()=>Get.to(LoginScreen()) ,style: GoogleFonts.kalam()),
-
-                      const SizedBox(height: 70),
-                      const RichTextTwo()
-                    ],
-                  ),
-                ],
-              )
-            ),
+                child: Column(
+                  children: [
+                    Align(
+                        alignment:Alignment.centerLeft,
+                        child: IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_back_ios))
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(30),
+                          child: Text(splash1, style: GoogleFonts.kalam(
+                            fontSize: 43.sp,
+                            color: ConstColor.bgColor.value,
+                            fontWeight: FontWeight.bold,
+                          )),
+                        ),
+                        const SizedBox(height: 50),
+                        CustomMainButton(title: 'Sign Up', onpressed: ()=> Get.to(SignUpScreen()) , style: GoogleFonts.kalam(),),
+               
+                        const SizedBox(height: 60),
+                        CustomMainButton(title: 'Login', onpressed: ()=>Get.to(LoginScreen()) ,style: GoogleFonts.kalam()),
+               
+                        const SizedBox(height: 70),
+                        const RichTextTwo()
+                      ],
+                    ),
+                  ],
+                )
+                           ),
+             ),
               ],
             ),
           ),
