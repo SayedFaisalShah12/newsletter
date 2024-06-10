@@ -100,29 +100,29 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
                         ),
                         Row(
                           children: [
-                            SizedBox(
+                            const SizedBox(
                               width: 28,
                             ),
-                            CustomOtpContainer(),
+                            const CustomOtpContainer(),
                             SizedBox(
                               width: 10.w,
                             ),
-                            CustomOtpContainer(),
+                            const CustomOtpContainer(),
                             SizedBox(
                               width: 10.w,
                             ),
-                            CustomOtpContainer(),
+                            const CustomOtpContainer(),
                             SizedBox(
                               width: 10.w,
                             ),
-                            CustomOtpContainer(),
+                            const CustomOtpContainer(),
                           ],
                         ),
-                        Spacer(),
+                        const Spacer(),
                         CustomMainButton(
                             title: 'Verify',
                             onpressed: () {
-                              Get.to(() => NewPasswordScreen());
+                              Get.to(() => const NewPasswordScreen());
                             }),
                         SizedBox(
                           height: 30.h,

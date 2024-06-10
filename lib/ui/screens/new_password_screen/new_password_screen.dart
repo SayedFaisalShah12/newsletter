@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
@@ -107,7 +106,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                           height: 10.h,
                         ),
 
-                        CustomTextFeild_prefix_suffix(
+                        const CustomTextFeild_prefix_suffix(
                           prefixIcon: Icons.email,
                           suffixIcon: Icons.visibility_off,
                         ),
@@ -127,12 +126,12 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                           height: 10.h,
                         ),
 
-                        CustomTextFeild_prefix_suffix(
+                        const CustomTextFeild_prefix_suffix(
                           prefixIcon: Icons.email,
                           suffixIcon: Icons.visibility_off,
                         ),
 
-                        Spacer(),
+                        const Spacer(),
                         CustomMainButton(
                             title: 'Confirm',
                             onpressed: () {
@@ -159,17 +158,17 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                                     ),
                                     SpinKitFadingCircle(
                                       color: ConstColor.wordsColor2.value,
-                                      duration: Duration(seconds: 3),
+                                      duration: const Duration(seconds: 3),
                                     ),
                                   ],
                                 ),
                               );
-                              Future.delayed(Duration(seconds: 3), () {
+                              Future.delayed(const Duration(seconds: 3), () {
                                 // Close the dialog
                                 Get.back();
 
                                 // Navigate to the login screen
-                                Get.offAll(LoginScreen());
+                                Get.offAll(const LoginScreen());
                               });
                             }),
                         SizedBox(
