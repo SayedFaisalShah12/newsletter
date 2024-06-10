@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
+import 'package:newslatter/ui/screens/create_family_screen/create_family_screen.dart';
+import 'package:newslatter/ui/screens/join_family_screen/join_family_screen.dart';
 import '../../../core/constants/const_colors.dart';
 import '../../components/custom_main_button.dart';
 import '../../components/home_container.dart';
@@ -69,6 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         //   padding:   EdgeInsets.only(top: 32.h),
                         //   child: Text("Your Families", style: titleText),
                         // ),
+                        Text('Your Families', style: homeScreenTitle,),
 
                         Padding(
                           padding:  EdgeInsets.symmetric(horizontal: 10.w),
@@ -93,9 +97,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
 
                           SizedBox(height: 20.h),
-                        CustomMainButton(title: 'Create Family', style: GoogleFonts.kalam(), onpressed: () {  },),
+                        CustomMainButton(title: 'Create Family', style: GoogleFonts.kalam(), onpressed: () {
+                          Get.to(()=> NewFamilyScreen());
+                        },),
+                        SizedBox(height: 27.h,),
 
-                        CustomMainButton(title: 'Join Family', style: GoogleFonts.kalam(), onpressed: () {  },),
+                        CustomMainButton(title: 'Join Family', style: GoogleFonts.kalam(), onpressed: () {
+                          Get.to(()=>JoinFamily());
+                        },),
 
                       ],
                     )

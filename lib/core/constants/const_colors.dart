@@ -24,6 +24,7 @@ class ConstColor {
  ///border color
   static  var borderColor =const Color(0xffFF536D).obs;
   static  var outBorderColor =const Color(0xffFDD5B1).obs;
+  static  var otpBoxColor =const Color(0xffEEEEEE).obs;
 
 ///background color
   static  var bgColor =const Color(0xffFFB6C1).obs;

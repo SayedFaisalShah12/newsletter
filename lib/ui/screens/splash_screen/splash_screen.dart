@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/ui/screens/splash_screen/splash_screen_2.dart';
 import '../../../core/constants/const_colors.dart';
 import '../../../core/constants/const_rich_text.dart';

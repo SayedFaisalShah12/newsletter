@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
 import 'package:newslatter/ui/components/custom_icon_button.dart';
 import 'package:newslatter/ui/components/custom_logo.dart';
@@ -12,6 +13,7 @@ import 'package:newslatter/ui/components/custom_main_container.dart';
 import 'package:newslatter/ui/components/custom_password_field.dart';
 import 'package:newslatter/ui/components/custom_progress%20Indicator.dart';
 import 'package:newslatter/ui/components/custom_text_feild.dart';
+import 'package:newslatter/ui/screens/forget_password_screen/forget_screen.dart';
 import 'package:newslatter/ui/screens/home_screen/home_screen.dart';
 
 import '../../../controller/circular_progress_controller.dart';
@@ -68,7 +70,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       const CustomPasswordFeild(hint: "Password"),
 
                       SizedBox(height: 12.h,),
-                      InkWell(child: Text("Forgot Password", style: normalText)),
+                      InkWell(
+                          onTap: (){
+                            Get.to(()=>ForgetPasswordScreen());
+                          },
+                          child: Text("Forgot Password", style: normalText)),
 
                       SizedBox(height: 12.h,),
                       Obx(() {

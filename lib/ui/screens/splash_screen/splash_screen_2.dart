@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
-import 'package:newslatter/ui/components/custom_main_button.dart';
 import 'package:newslatter/ui/screens/Signup_or_login/signup_or_login.dart';
 
 import '../../../core/constants/const_colors.dart';
