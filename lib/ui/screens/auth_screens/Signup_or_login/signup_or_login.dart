@@ -5,13 +5,13 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/controller/animated_bottomsheet_controller.dart';
-import 'package:newslatter/ui/screens/login/login.dart';
-import 'package:newslatter/ui/screens/signUp/signUp.dart';
-import '../../../core/constants/const_colors.dart';
-import '../../../core/constants/const_rich_text.dart';
-import '../../../core/constants/const_texts.dart';
-import '../../components/custom_logo.dart';
-import '../../components/custom_main_button.dart';
+import 'package:newslatter/core/constants/const_colors.dart';
+import 'package:newslatter/core/constants/const_rich_text.dart';
+import 'package:newslatter/core/constants/const_texts.dart';
+import 'package:newslatter/ui/components/custom_logo.dart';
+import 'package:newslatter/ui/components/custom_main_button.dart';
+import 'package:newslatter/ui/screens/auth_screens/login/login.dart';
+import 'package:newslatter/ui/screens/auth_screens/signUp/signUp.dart';
 
 class LoginOrSignUp extends StatefulWidget {
   const LoginOrSignUp({super.key});

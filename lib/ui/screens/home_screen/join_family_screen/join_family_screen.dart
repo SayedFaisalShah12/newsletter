@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
+import 'package:newslatter/generated/assets.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
 import 'package:newslatter/ui/components/custom_text_feild.dart';
-import 'package:newslatter/ui/components/home_container.dart';
+import 'package:newslatter/ui/screens/home_screen/home_screen.dart';
 
-class NewFamilyScreen extends StatefulWidget {
-  const NewFamilyScreen({super.key});
+class JoinFamily extends StatefulWidget {
+  const JoinFamily({super.key});
 
   @override
-  State<NewFamilyScreen> createState() => _NewFamilyScreenState();
+  State<JoinFamily> createState() => _JoinFamilyState();
 }
 
-class _NewFamilyScreenState extends State<NewFamilyScreen> {
+class _JoinFamilyState extends State<JoinFamily> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,24 +80,60 @@ class _NewFamilyScreenState extends State<NewFamilyScreen> {
                         //   child: Text("Your Families", style: titleText),
                         // ),
                         Text(
-                          createFamily,
+                          joinFamily,
                           style: homeScreenTitle,
                         ),
                         SizedBox(
                           height: 20.h,
                         ),
                         Text(
-                          getStart,
+                          joinNow,
                           style: normalText,
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
                           height: 40.h,
                         ),
-                        CustomTextFeild(hint: 'Family Name'),
+                        CustomTextFeild(hint: 'Access Code'),
                         Spacer(),
                         CustomMainButton(
-                            title: 'Create Family', onpressed: () {}),
+                            title: 'Join Family', onpressed: () {
+                          Get.defaultDialog(
+                            title: '',
+                            backgroundColor:
+                            ConstColor.containerBackgroundColor.value,
+                            content: Column(
+                              children: [
+                                Image.asset(
+                                  Assets.heart,
+                                  height: 207.h,
+                                  width: 199.w,
+                                ),
+                                Text(
+                                  congrats,
+                                  style: homeScreenTitle,
+                                ),
+                                Text(
+                                  textAlign: TextAlign.center,
+                                  familyJoin,
+                                  style:
+                                  normalText.copyWith(fontSize: 16.sp),
+                                ),
+                                SpinKitFadingCircle(
+                                  color: ConstColor.wordsColor2.value,
+                                  duration: const Duration(seconds: 3),
+                                ),
+                              ],
+                            ),
+                          );
+                          Future.delayed(const Duration(seconds: 3), () {
+                            // Close the dialog
+                            Get.back();
+
+                            // Navigate to the login screen
+                            Get.offAll(const HomeScreen());
+                          });
+                        }),
                         SizedBox(
                           height: 30,
                         ),

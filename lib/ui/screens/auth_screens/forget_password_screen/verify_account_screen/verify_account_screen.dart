@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
+import 'package:newslatter/generated/assets.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
-import 'package:newslatter/ui/components/custom_text_feild.dart';
+import 'package:newslatter/ui/screens/auth_screens/forget_password_screen/new_password_screen/new_password_screen.dart';
 
-class JoinFamily extends StatefulWidget {
-  const JoinFamily({super.key});
+class VerifyAccountScreen extends StatefulWidget {
+  const VerifyAccountScreen({super.key});
 
   @override
-  State<JoinFamily> createState() => _JoinFamilyState();
+  State<VerifyAccountScreen> createState() => _VerifyAccountScreenState();
 }
 
-class _JoinFamilyState extends State<JoinFamily> {
+class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,26 +79,53 @@ class _JoinFamilyState extends State<JoinFamily> {
                         //   child: Text("Your Families", style: titleText),
                         // ),
                         Text(
-                          joinFamily,
+                          verify,
                           style: homeScreenTitle,
                         ),
                         SizedBox(
                           height: 20.h,
                         ),
+                        Image.asset(
+                          Assets.forget_lock,
+                          height: 220.h,
+                          width: 226.w,
+                        ),
                         Text(
-                          joinNow,
+                          verifyDes,
                           style: normalText,
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
-                          height: 40.h,
+                          height: 48.h,
                         ),
-                        CustomTextFeild(hint: 'Access Code'),
-                        Spacer(),
+                        Row(
+                          children: [
+                            const SizedBox(
+                              width: 28,
+                            ),
+                            const CustomOtpContainer(),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            const CustomOtpContainer(),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            const CustomOtpContainer(),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            const CustomOtpContainer(),
+                          ],
+                        ),
+                        const Spacer(),
                         CustomMainButton(
-                            title: 'Join Family', onpressed: () {}),
+                            title: 'Verify',
+                            onpressed: () {
+                              Get.to(() => const NewPasswordScreen());
+                            }),
                         SizedBox(
-                          height: 30,
+                          height: 30.h,
                         ),
 
                         // Padding(
@@ -125,6 +155,28 @@ class _JoinFamilyState extends State<JoinFamily> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class CustomOtpContainer extends StatelessWidget {
+  const CustomOtpContainer({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 61.h,
+      width: 83.w,
+      decoration: BoxDecoration(
+        color: ConstColor.otpBoxColor.value,
+      ),
+      child: Center(
+        child: Text('8',
+            style:
+                GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.w600)),
       ),
     );
   }

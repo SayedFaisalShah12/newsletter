@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
-import 'package:newslatter/ui/screens/create_family_screen/create_family_screen.dart';
-import 'package:newslatter/ui/screens/join_family_screen/join_family_screen.dart';
+import 'package:newslatter/ui/screens/home_screen/create_family_screen/create_family_screen.dart';
+import 'package:newslatter/ui/screens/home_screen/join_family_screen/join_family_screen.dart';
 import '../../../core/constants/const_colors.dart';
 import '../../components/custom_main_button.dart';
 import '../../components/home_container.dart';
@@ -86,11 +86,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             child: Column(
                               children: [
-                                HomeContainer(title: 'Yao Family',),
+                                HomeContainer(title: 'Yao Family', onPress: () {  },),
                                 SizedBox(height: 52.h,),
-                                HomeContainer(title: 'Ullery Family',),
+                                HomeContainer(title: 'Ullery Family', onPress: () {  },),
                                 SizedBox(height: 52.h,),
-                                HomeContainer(title: 'Johnson Family',)
+                                HomeContainer(title: 'Johnson Family', onPress: () {  },)
                               ],
                             ),
                           ),

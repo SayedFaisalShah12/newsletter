@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
 import 'package:newslatter/generated/assets.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
-import 'package:newslatter/ui/screens/new_password_screen/new_password_screen.dart';
+import 'package:newslatter/ui/components/custom_text_feild.dart';
+import 'package:newslatter/ui/screens/home_screen/home_screen.dart';
 
-class VerifyAccountScreen extends StatefulWidget {
-  const VerifyAccountScreen({super.key});
+class NewFamilyScreen extends StatefulWidget {
+  const NewFamilyScreen({super.key});
 
   @override
-  State<VerifyAccountScreen> createState() => _VerifyAccountScreenState();
+  State<NewFamilyScreen> createState() => _NewFamilyScreenState();
 }
 
-class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
+class _NewFamilyScreenState extends State<NewFamilyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,53 +80,63 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
                         //   child: Text("Your Families", style: titleText),
                         // ),
                         Text(
-                          verify,
+                          createFamily,
                           style: homeScreenTitle,
                         ),
                         SizedBox(
                           height: 20.h,
                         ),
-                        Image.asset(
-                          Assets.forget_lock,
-                          height: 220.h,
-                          width: 226.w,
-                        ),
                         Text(
-                          verifyDes,
+                          getStart,
                           style: normalText,
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
-                          height: 48.h,
+                          height: 40.h,
                         ),
-                        Row(
-                          children: [
-                            const SizedBox(
-                              width: 28,
-                            ),
-                            const CustomOtpContainer(),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            const CustomOtpContainer(),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            const CustomOtpContainer(),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            const CustomOtpContainer(),
-                          ],
-                        ),
-                        const Spacer(),
+                        CustomTextFeild(hint: 'Family Name'),
+                        Spacer(),
                         CustomMainButton(
-                            title: 'Verify',
+                            title: 'Create Family',
                             onpressed: () {
-                              Get.to(() => const NewPasswordScreen());
+                              Get.defaultDialog(
+                                title: '',
+                                backgroundColor:
+                                    ConstColor.containerBackgroundColor.value,
+                                content: Column(
+                                  children: [
+                                    Image.asset(
+                                      Assets.heart,
+                                      height: 207.h,
+                                      width: 199.w,
+                                    ),
+                                    Text(
+                                      congrats,
+                                      style: homeScreenTitle,
+                                    ),
+                                    Text(
+                                      textAlign: TextAlign.center,
+                                      familyCreate,
+                                      style:
+                                          normalText.copyWith(fontSize: 16.sp),
+                                    ),
+                                    SpinKitFadingCircle(
+                                      color: ConstColor.wordsColor2.value,
+                                      duration: const Duration(seconds: 3),
+                                    ),
+                                  ],
+                                ),
+                              );
+                              Future.delayed(const Duration(seconds: 3), () {
+                                // Close the dialog
+                                Get.back();
+
+                                // Navigate to the login screen
+                                Get.offAll(const HomeScreen());
+                              });
                             }),
                         SizedBox(
-                          height: 30.h,
+                          height: 30,
                         ),
 
                         // Padding(
@@ -155,28 +166,6 @@ class _VerifyAccountScreenState extends State<VerifyAccountScreen> {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class CustomOtpContainer extends StatelessWidget {
-  const CustomOtpContainer({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 61.h,
-      width: 83.w,
-      decoration: BoxDecoration(
-        color: ConstColor.otpBoxColor.value,
-      ),
-      child: Center(
-        child: Text('8',
-            style:
-                GoogleFonts.poppins(fontSize: 24, fontWeight: FontWeight.w600)),
       ),
     );
   }

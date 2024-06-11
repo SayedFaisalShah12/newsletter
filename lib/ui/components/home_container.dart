@@ -5,22 +5,27 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../core/constants/const_colors.dart';
 import '../../core/constants/const_styles.dart';
 class HomeContainer extends StatelessWidget {
-  String title;
-    HomeContainer({super.key,required this.title});
+  final String title;
+   final VoidCallback onPress;
+
+   const HomeContainer({super.key,required this.title, required this.onPress});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      height: 95.h,
-      width:375.w,
-      padding: EdgeInsets.symmetric(vertical: 12.h),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.sp),
-          color:ConstColor.bgColor.value,
-          border: Border.all(color:ConstColor.borderColor.value,width: 2.w)
+    return InkWell(
+      onTap: onPress,
+      child: Container(
+        alignment: Alignment.center,
+        height: 95.h,
+        width:375.w,
+        padding: EdgeInsets.symmetric(vertical: 12.h),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.sp),
+            color:ConstColor.bgColor.value,
+            border: Border.all(color:ConstColor.borderColor.value,width: 2.w)
+        ),
+        child: Text(title ,style: homeScreenTitle,),
       ),
-      child: Text(title ,style: homeScreenTitle,),
     );
   }
 }

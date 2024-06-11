@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
-import 'package:newslatter/generated/assets.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
-import 'package:newslatter/ui/components/custom_textfield_prefix_suffix.dart';
-import 'package:newslatter/ui/screens/login/login.dart';
+import 'package:newslatter/ui/components/custom_textfield_prefix.dart';
 
-class NewPasswordScreen extends StatefulWidget {
-  const NewPasswordScreen({super.key});
+import 'verify_account_screen/verify_account_screen.dart';
+
+
+class ForgetPasswordScreen extends StatefulWidget {
+  const ForgetPasswordScreen({super.key});
 
   @override
-  State<NewPasswordScreen> createState() => _NewPasswordScreenState();
+  State<ForgetPasswordScreen> createState() => _ForgetPasswordScreenState();
 }
 
-class _NewPasswordScreenState extends State<NewPasswordScreen> {
+class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       body: SafeArea(
         child: Container(
           width: double.infinity,
@@ -73,107 +73,35 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
                       ),
                     ),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         // Padding(
                         //   padding:   EdgeInsets.only(top: 32.h),
                         //   child: Text("Your Families", style: titleText),
                         // ),
                         Text(
-                          newPass,
+                          forget,
                           style: homeScreenTitle,
                         ),
                         SizedBox(
                           height: 20.h,
                         ),
                         Text(
-                          newPassDes,
+                          forgetDes,
                           style: normalText,
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(
-                          height: 66.h,
+                          height: 14.h,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 60),
-                          child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                newPassword,
-                                style: normalText,
-                              )),
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
+                        CustomTextFeildprefix(icon: Icons.email,),
+                        Spacer(),
+                        CustomMainButton(title: 'Send My Code', onpressed: (){
+                          Get.to(()=>VerifyAccountScreen());
+                        }),
+                        SizedBox(height: 30.h,),
 
-                        const CustomTextFeild_prefix_suffix(
-                          prefixIcon: Icons.email,
-                          suffixIcon: Icons.visibility_off,
-                        ),
-                        SizedBox(
-                          height: 62.h,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 60),
-                          child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: Text(
-                                confirmPass,
-                                style: normalText,
-                              )),
-                        ),
-                        SizedBox(
-                          height: 10.h,
-                        ),
 
-                        const CustomTextFeild_prefix_suffix(
-                          prefixIcon: Icons.email,
-                          suffixIcon: Icons.visibility_off,
-                        ),
-
-                        const Spacer(),
-                        CustomMainButton(
-                            title: 'Confirm',
-                            onpressed: () {
-                              Get.defaultDialog(
-                                title: '',
-                                backgroundColor:
-                                    ConstColor.containerBackgroundColor.value,
-                                content: Column(
-                                  children: [
-                                    Image.asset(
-                                      Assets.heart,
-                                      height: 207.h,
-                                      width: 199.w,
-                                    ),
-                                    Text(
-                                      congrats,
-                                      style: homeScreenTitle,
-                                    ),
-                                    Text(
-                                      textAlign: TextAlign.center,
-                                      passChange,
-                                      style:
-                                          normalText.copyWith(fontSize: 16.sp),
-                                    ),
-                                    SpinKitFadingCircle(
-                                      color: ConstColor.wordsColor2.value,
-                                      duration: const Duration(seconds: 3),
-                                    ),
-                                  ],
-                                ),
-                              );
-                              Future.delayed(const Duration(seconds: 3), () {
-                                // Close the dialog
-                                Get.back();
-
-                                // Navigate to the login screen
-                                Get.offAll(const LoginScreen());
-                              });
-                            }),
-                        SizedBox(
-                          height: 30.h,
-                        ),
 
                         // Padding(
                         //   padding:  EdgeInsets.symmetric(horizontal: 10.w),
