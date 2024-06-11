@@ -28,4 +28,7 @@ class ConstColor {
 
 ///background color
   static  var bgColor =const Color(0xffFFB6C1).obs;
+  static  var bottomSheetBack =const Color(0xffF6D7D7).obs;
+  static  var border =const Color(0xffFF4343).obs;
+  static  var commentBox =const Color(0xffFAFAD2).obs;
 }
