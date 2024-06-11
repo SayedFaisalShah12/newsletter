@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/ui/screens/home_screen/create_family_screen/create_family_screen.dart';
+import 'package:newslatter/ui/screens/home_screen/family_screen/family_screen.dart';
 import 'package:newslatter/ui/screens/home_screen/join_family_screen/join_family_screen.dart';
 import '../../../core/constants/const_colors.dart';
 import '../../components/custom_main_button.dart';
@@ -86,7 +87,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                             child: Column(
                               children: [
-                                HomeContainer(title: 'Yao Family', onPress: () {  },),
+                                HomeContainer(title: 'Yao Family', onPress: () {
+                                  Get.to(()=>const FamilyScreen());
+                                },),
                                 SizedBox(height: 52.h,),
                                 HomeContainer(title: 'Ullery Family', onPress: () {  },),
                                 SizedBox(height: 52.h,),
@@ -98,12 +101,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
                           SizedBox(height: 20.h),
                         CustomMainButton(title: 'Create Family', style: GoogleFonts.kalam(), onpressed: () {
-                          Get.to(()=> NewFamilyScreen());
+                          Get.to(()=> const NewFamilyScreen());
                         },),
                         SizedBox(height: 27.h,),
 
                         CustomMainButton(title: 'Join Family', style: GoogleFonts.kalam(), onpressed: () {
-                          Get.to(()=>JoinFamily());
+                          Get.to(()=>const JoinFamily());
                         },),
 
                       ],

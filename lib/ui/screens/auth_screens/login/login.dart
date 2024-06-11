@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/controller/circular_progress_controller.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
@@ -42,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Align(
+                const Align(
                   alignment: Alignment.topLeft,
                     child: Logo()
                 ),
@@ -54,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         padding:   EdgeInsets.all(10.h),
                         child: Row(
                           children: [
-                            InkWell(child: Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
+                            InkWell(child: const Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
                             SizedBox(width: 131.h,),
                             Text("Login", style: GoogleFonts.kalam(fontSize: 35.sp,)),
                           ],
@@ -70,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(height: 12.h,),
                       InkWell(
                           onTap: (){
-                            Get.to(()=>ForgetPasswordScreen());
+                            Get.to(()=>const ForgetPasswordScreen());
                           },
                           child: Text("Forgot Password", style: normalText)),
 

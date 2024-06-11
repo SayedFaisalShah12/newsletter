@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     width: Get.width * 0.6,
                       child: InkWell(
                         child: Image.asset('assets/image/logo.png'),
-                        onTap: ()=>Get.to(SplashScreen2()),
+                        onTap: ()=>Get.to(const SplashScreen2()),
                       )
                   ),
                   const RichTextOne(),

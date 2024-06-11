@@ -94,8 +94,8 @@ class _JoinFamilyState extends State<JoinFamily> {
                         SizedBox(
                           height: 40.h,
                         ),
-                        CustomTextFeild(hint: 'Access Code'),
-                        Spacer(),
+                        const CustomTextFeild(hint: 'Access Code'),
+                        const Spacer(),
                         CustomMainButton(
                             title: 'Join Family', onpressed: () {
                           Get.defaultDialog(
@@ -134,7 +134,7 @@ class _JoinFamilyState extends State<JoinFamily> {
                             Get.offAll(const HomeScreen());
                           });
                         }),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
 

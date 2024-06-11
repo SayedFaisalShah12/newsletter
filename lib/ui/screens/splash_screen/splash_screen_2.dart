@@ -1,9 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
 import 'package:newslatter/ui/screens/auth_screens/Signup_or_login/signup_or_login.dart';
@@ -44,7 +41,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                             InkWell(
                               child: Image.asset('assets/image/logo.png'),
                               onTap: (){
-                                Get.to( LoginOrSignUp());
+                                Get.to( const LoginOrSignUp());
                               },
                             ),
                             Text("Tap to Continue!", style: GoogleFonts.kalam(
@@ -73,7 +70,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                               color: Colors.pinkAccent,
                               fontWeight: FontWeight.bold,),
                             ),
-                            SizedBox(height: 20,),
+                            const SizedBox(height: 20,),
                             Text(splash2, style: GoogleFonts.kalam(
                               fontSize: 26.sp,
                               color: Colors.black,

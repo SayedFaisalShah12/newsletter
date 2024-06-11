@@ -36,7 +36,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(
+              const Align(
                   alignment: Alignment.topLeft,
                   child: Logo()
               ),
@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       padding: const EdgeInsets.all(10.0),
                       child: Row(
                         children: [
-                          InkWell(child: Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
+                          InkWell(child: const Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
                           SizedBox(width: 131.h,),
                           Text("Sign Up ", style: GoogleFonts.kalam(fontSize: 35.sp,)),
                         ],
@@ -56,16 +56,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
 
                     SizedBox(height: 20.h,),
-                    CustomTextFeild(hint: "Email",),
+                    const CustomTextFeild(hint: "Email",),
 
                     SizedBox(height: 21.h,),
-                    CustomTextFeild(hint: "Username"),
+                    const CustomTextFeild(hint: "Username"),
 
                     SizedBox(height: 21.h,),
-                    CustomTextFeild(hint: "Password"),
+                    const CustomTextFeild(hint: "Password"),
 
                     SizedBox(height: 21.h,),
-                    CustomTextFeild(hint: "Confirm Password"),
+                    const CustomTextFeild(hint: "Confirm Password"),
 
                     SizedBox(height: 10.h,),
                     Text("or Continue with", style: mediumText,),

@@ -3,5 +3,6 @@ class Assets {
   static const String splash_logo = 'assets/images/splash_logo2.png';
   static const String forget_lock = 'assets/image/lock.png';
   static const String heart = 'assets/image/heart.png';
+  static const String menu_button = 'assets/icon/menu_button.png';
 
 }

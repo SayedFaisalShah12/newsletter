@@ -94,10 +94,10 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                         SizedBox(
                           height: 14.h,
                         ),
-                        CustomTextFeildprefix(icon: Icons.email,),
-                        Spacer(),
+                        const CustomTextFeildprefix(icon: Icons.email,),
+                        const Spacer(),
                         CustomMainButton(title: 'Send My Code', onpressed: (){
-                          Get.to(()=>VerifyAccountScreen());
+                          Get.to(()=>const VerifyAccountScreen());
                         }),
                         SizedBox(height: 30.h,),
 

@@ -16,14 +16,15 @@ class CustomMainButton extends StatelessWidget {
     return InkWell(
       onTap: onpressed,
       child: Container(
-        padding: EdgeInsets.only(right: 16.w,left: 16.w,top: 16.h,bottom: 16.h),
+        // padding: EdgeInsets.only(right: 16.w,left: 16.w,top: 16.h,bottom: 16.h),
 
-        height: 75.h,
+        height: 76.h,
+        width: 232.w,
         decoration: BoxDecoration(
           color: ConstColor.wordsColor2.value,
           borderRadius: BorderRadius.circular(20),
         ),
-        child: Text(title, style: GoogleFonts.kalam(fontSize: 30, color: Colors.white,)),
+        child: Center(child: Text(title, style: GoogleFonts.kalam(fontSize: 30, color: Colors.white,))),
       ),
     );
   }

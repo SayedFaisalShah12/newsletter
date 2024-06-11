@@ -93,9 +93,8 @@ class _NewFamilyScreenState extends State<NewFamilyScreen> {
                         ),
                         SizedBox(
                           height: 40.h,
-                        ),
-                        CustomTextFeild(hint: 'Family Name'),
-                        Spacer(),
+                        ),const CustomTextFeild(hint: 'Family Name'),
+                        const Spacer(),
                         CustomMainButton(
                             title: 'Create Family',
                             onpressed: () {
@@ -135,7 +134,7 @@ class _NewFamilyScreenState extends State<NewFamilyScreen> {
                                 Get.offAll(const HomeScreen());
                               });
                             }),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
 

@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/controller/animated_bottomsheet_controller.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
@@ -46,7 +44,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                child: Container(
                 decoration:  BoxDecoration(
                   color: ConstColor.containerBackgroundColor.value,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     topLeft: Radius.circular(25),
                     topRight: Radius.circular(25),
                   ),
@@ -61,7 +59,7 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(30),
+                          padding: const EdgeInsets.all(30),
                           child: Text(splash1, style: GoogleFonts.kalam(
                             fontSize: 43.sp,
                             color: ConstColor.bgColor.value,
@@ -69,10 +67,10 @@ class _LoginOrSignUpState extends State<LoginOrSignUp> {
                           )),
                         ),
                         const SizedBox(height: 50),
-                        CustomMainButton(title: 'Sign Up', onpressed: ()=> Get.to(SignUpScreen()) , style: GoogleFonts.kalam(),),
+                        CustomMainButton(title: 'Sign Up', onpressed: ()=> Get.to(const SignUpScreen()) , style: GoogleFonts.kalam(),),
                
                         const SizedBox(height: 60),
-                        CustomMainButton(title: 'Login', onpressed: ()=>Get.to(LoginScreen()) ,style: GoogleFonts.kalam()),
+                        CustomMainButton(title: 'Login', onpressed: ()=>Get.to(const LoginScreen()) ,style: GoogleFonts.kalam()),
                
                         const SizedBox(height: 70),
                         const RichTextTwo()
