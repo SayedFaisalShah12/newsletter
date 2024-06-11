@@ -113,7 +113,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
-<<<<<<< HEAD
+  file:
+    dependency: transitive
+    description:
+      name: file
+      sha256: "5fc22d7c25582e38ad9a8515372cd9a93834027aacf1801cf01164dac0ffa08c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "7.0.0"
   file_selector_linux:
     dependency: transitive
     description:
@@ -146,15 +153,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.9.3+1"
-=======
-  file:
-    dependency: transitive
-    description:
-      name: file
-      sha256: "5fc22d7c25582e38ad9a8515372cd9a93834027aacf1801cf01164dac0ffa08c"
-      url: "https://pub.dev"
-    source: hosted
-    version: "7.0.0"
   fixnum:
     dependency: transitive
     description:
@@ -163,7 +161,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
->>>>>>> dc402a4564940b95bd485d3f460bbfca3d76fa74
   flutter:
     dependency: "direct main"
     description: flutter
@@ -379,7 +376,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.12.0"
-<<<<<<< HEAD
   mime:
     dependency: transitive
     description:
@@ -388,7 +384,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
-=======
   octo_image:
     dependency: transitive
     description:
@@ -397,7 +392,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
->>>>>>> dc402a4564940b95bd485d3f460bbfca3d76fa74
   otp_pin_field:
     dependency: "direct main"
     description:
@@ -482,10 +476,10 @@ packages:
     dependency: transitive
     description:
       name: platform
-      sha256: "12220bb4b65720483f8fa9450b4332347737cf8213dd2840d8b2c823e47243ec"
+      sha256: "9b71283fc13df574056616011fb138fd3b793ea47cc509c189a6c3fa5f8a1a65"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.4"
+    version: "3.1.5"
   plugin_platform_interface:
     dependency: transitive
     description:
