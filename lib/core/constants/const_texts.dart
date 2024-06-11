@@ -8,6 +8,11 @@ const  String newPassword = "New Password";
 const  String confirmPass = "Confirm Password";
 const  String congrats = "Congrats!";
 const  String account = "Account";
+const  String yourAccount = "Your Account";
+const  String username = "Username";
+const  String email = "Email";
+const  String password = "Password";
+const  String paymentPlan = "Payment Plan";
 const  String logOut = "LogOut";
 const  String yaoFamily = "Yao Family";
 const  String postTitle = "Jackson’s First Basketball Game";
@@ -24,5 +29,9 @@ const  String forgetDes = "No worries! Enter your email to receive\na secure aut
 const  String joinNow = "Lets get you added to a family!\n Please type in the access code given to you.";
 const  String getStart = "Get started on your family group!\n Give your family a name  ";
  const String splash2 = "Welcome to Family FunsFeed (FFF) – where family time becomes fun time! Our motto, Just Do Family, emphasizes our mission to strengthen family ties in a safe, private space.";
+ const String subscription = "You are monthly on the monthly subscription";
+ const String currentPayment = "Current Payment Method: ";
+ const String paymentStarted = "Payment started:";
+ const String nextPayment = "Next Payment Date:";
 
 

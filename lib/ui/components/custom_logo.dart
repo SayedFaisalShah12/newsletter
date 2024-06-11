@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
@@ -10,8 +11,8 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Get.height * 0.15,
-      width: Get.width * 0.28,
+      height: 110.h,
+      width: 100.w,
       child: Image.asset('assets/image/logo.png'),
     );
   }

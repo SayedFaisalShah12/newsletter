@@ -5,25 +5,31 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 
-class CustomMainButton extends StatelessWidget {
+class CustomMainButtonTwo extends StatelessWidget {
   final String title;
-  final style;
+  double height;
+  double width;
+  double fontsize;
   final VoidCallback onpressed;
-   CustomMainButton({super.key, required this.title,  this.style, required this.onpressed});
+  var padding;
+
+  CustomMainButtonTwo({super.key, required this.title, required this.width, required this.height, required this.fontsize  ,required this.onpressed, this.padding});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onpressed,
       child: Container(
-
-        height: 76.h,
-        width: 232.w,
+        height: height,
+        width: width,
         decoration: BoxDecoration(
           color: ConstColor.wordsColor2.value,
           borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: ConstColor.borderColor.value, width: 2.w,)
         ),
-        child: Center(child: Text(title, style: GoogleFonts.kalam(fontSize: 30, color: Colors.white,))),
+        child: Center(
+            child: Text(title, style: GoogleFonts.kalam(fontSize: fontsize, color: Colors.white,),
+            )),
       ),
     );
   }

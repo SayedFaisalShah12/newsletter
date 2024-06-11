@@ -48,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       padding: const EdgeInsets.all(10.0),
                       child: Row(
                         children: [
-                          InkWell(child: const Icon(Icons.arrow_back_ios), onTap: ()=> Get.back(),),
+                          InkWell(child: const Icon(Icons.arrow_back_ios), onTap: ()=> Get.back()),
                           SizedBox(width: 131.h,),
                           Text("Sign Up ", style: GoogleFonts.kalam(fontSize: 35.sp,)),
                         ],

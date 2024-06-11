@@ -6,6 +6,7 @@ import 'package:newslatter/core/constants/const_styles.dart';
 import 'package:newslatter/core/constants/const_texts.dart';
 import 'package:newslatter/generated/assets.dart';
 import 'package:newslatter/ui/components/custom_main_button.dart';
+import 'package:newslatter/ui/screens/home_screen/account_information/account_information_screen.dart';
 import 'package:newslatter/ui/screens/home_screen/family_screen/family_des_screen/family_des_screen.dart';
 
 class FamilyScreen extends StatefulWidget {
@@ -50,7 +51,10 @@ class _FamilyScreenState extends State<FamilyScreen> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text(account, style: normalText),
+                        InkWell(
+                          onTap: (){Get.to(() => AccountInformationScreen());},
+                            child: Text(account, style: normalText)
+                        ),
                         InkWell(
                             onTap: () {},
                             child: Text(logOut, style: normalText)),
