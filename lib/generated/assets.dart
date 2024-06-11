@@ -4,5 +4,7 @@ class Assets {
   static const String forget_lock = 'assets/image/lock.png';
   static const String heart = 'assets/image/heart.png';
   static const String menu_button = 'assets/icon/menu_button.png';
+  static const String back_button = 'assets/image/back_button.png';
+  static const String reactions_button = 'assets/image/reactions.png';
 
 }

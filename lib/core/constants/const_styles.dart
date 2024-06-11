@@ -37,3 +37,9 @@ final mediumText=GoogleFonts.kalam(
   fontWeight: FontWeight.w400,
   color: ConstColor.wordsColor2.value,
 );
+
+final postHeading=GoogleFonts.kalam(
+  fontSize: 15.sp,
+  fontWeight: FontWeight.w700,
+  color: ConstColor.kblack.value,
+);
