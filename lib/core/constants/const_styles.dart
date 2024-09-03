@@ -1,11 +1,10 @@
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newslatter/core/constants/const_colors.dart';
 
-TextStyle primaryStyle=GoogleFonts.kalam(
+TextStyle primaryStye=GoogleFonts.kalam(
   fontSize: 40.sp,
   fontWeight: FontWeight.w400,
 
